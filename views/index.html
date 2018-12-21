@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="jumbotron">
+        <img src="../public/images/1.jpg" alt="">
+        <h1>首页</h1>
+        <p><a href="/post" class="btn btn-primary btn-lg" role="button">发表评论</a></p>
+    </div>
+    <ul class="list-group">
+        {{ each comments }}
+        <li class="list-group-item"><p>{{ $value.name }} 说：{{ $value.content }}</p></li>
+        {{ /each }}
+    </ul>
+</body>
+</html>
